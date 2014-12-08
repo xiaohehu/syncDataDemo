@@ -7,12 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import "SyncManager.h"
+#import "ModelManager.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [ModelManager initializeModelManager];
+    [SyncManager initializeSyncManager];
     return YES;
 }
 							
